@@ -166,7 +166,7 @@ function getCoordinates () {
         storedCities.push(cityInfo);
         localStorage.setItem("cities", JSON.stringify(storedCities));
 
-        displaySearchHistory();
+        //displaySearchHistory();
 
         return cityInfo;
       })
@@ -202,8 +202,9 @@ function clearCurrentCityWeather () {
 
 // handle submit of city name by trimming and sending to getCoordinates function, clear HTML display of past weather data, cards, titles
 function handleCityFormSubmit (event) {
-    event.preventDefault();
-    currentCity = cityInputEl.val().trim();
+    //event.preventDefault();
+    currentCity = "Rzeszów"
+    //currentCity = cityInputEl.val().trim();
 
     clearCurrentCityWeather();
     getCoordinates();
@@ -245,7 +246,7 @@ function getPastCity (event) {
     return;
 }
 
-displaySearchHistory();
+//displaySearchHistory();
 
 searchBtn.on("click", handleCityFormSubmit);
 
